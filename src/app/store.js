@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // Default: localStorage for web
+import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
 import todoReducer from '../features/todo/todoSlice';
 import apiSlice from '../features/todo/api/apiSlice';
