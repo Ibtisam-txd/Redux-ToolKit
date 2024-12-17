@@ -4,8 +4,7 @@ import { removeTodo, updateTodo } from "../features/todo/todoSlice";
 import { useGetTodosQuery } from "../features/todo/api/apiSlice";
 
 function Todos() {
-  // Ensure the correct path to the todos state
-  const todos = useSelector((state) => state.todos.todos); // Adjusted path to todos state
+  const todos = useSelector((state) => state.todos.todos); 
   const dispatch = useDispatch();
   const [editId, setEditId] = useState(null);
   const [editText, setEditText] = useState("");
@@ -26,7 +25,6 @@ function Todos() {
     <>
       <div>Todos</div>
       <ul className="list-none">
-        {/* Ensure todos is an array */}
         {Array.isArray(todos) &&
           todos.map((todo) => (
             <li
